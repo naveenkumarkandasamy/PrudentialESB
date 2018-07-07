@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       http://camel.apache.org/schema/spring/camel-spring.xsd">
+<!--     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+        <route id="_route1">
+            <from id="_from1" uri="file://data/input"/>
+            <process id="_process1" ref="myFileProcessor"/>
+            <to id="_to1" uri="file://data/outputUpperCase"/>
+        </route>
+        <route id="pastelToEasypay">
+            <from id="_fileFromPastel" uri="file://PADSToPastel/Input">
+                <description>Input folder for PAS. Place the XLSX file here. </description>
+            </from>
+            <process id="_process1" ref="myFileProcessor"/>
+            <to id="_to2" uri="cxfrs:beanId:address"/>
+        </route>
+        <route>    
+            <to id="_to4" uri="file://PASToPastel/Output">
+                <description>Pastel Output File will be available here. It will be sent to Easy pay Integerator</description>
+            </to>
+        </route>
+    </camelContext> -->
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+	     <routeBuilder ref="pastopastelrouteBuilder" />    
+	</camelContext>
+	<bean id="pastopastelrouteBuilder" class="org.pru.esb.routers.PASToPastelRouter"/>    
+    
+    <bean class="org.pru.esb.beans.PASFileProcessor" id="myFileProcessor"/>
+</beans>

@@ -67,6 +67,42 @@
 			<artifactId>camel-ftp</artifactId>
 			<version>2.21.0.fuse-000077-redhat-1</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-sql</artifactId>
+			<version>2.21.0.fuse-000077-redhat-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-servlet</artifactId>
+			<version>2.21.0.fuse-000077-redhat-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-restlet</artifactId>
+			<version>2.17.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+			<version>2.17.0</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
@@ -81,6 +117,10 @@
 			<id>jboss-early-access-repository</id>
 			<url>https://repository.jboss.org/nexus/content/groups/ea</url>
 		</repository>
+		<repository>
+			<id>maven-central-repository</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -94,6 +134,10 @@
 		<pluginRepository>
 			<id>jboss-early-access-repository</id>
 			<url>https://repository.jboss.org/nexus/content/groups/ea</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>maven-central-repository</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
